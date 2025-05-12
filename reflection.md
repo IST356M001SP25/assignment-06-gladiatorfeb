@@ -1,7 +1,7 @@
 # Reflection
 
-Student Name:  name
-Sudent Email:  email
+Student Name:  Hassatou Daramey
+Sudent Email:  hndarame
 
 ## Instructions
 
@@ -21,5 +21,11 @@ Examples:
 **Better Reflection** "I learned how to write while loops and their difference from for loops."   
 **Best Reflection** "I learned when to use while vs for loops. While loops are for sentiel-controlled values (waiting for a condition to occur), vs for loops are for iterating over collections of fixed values."
 
-`--- Reflection Below This Line ---`
+This assignment helped me understand how automated testing works in Python using pytest, but I ran into multiple issues that made it hard to get the tests running successfully. Specifically, when I tried running pytest, no tests were detected even though I had written and saved test functions like test_reviews_step_output() and others. At first, I didn’t realize the test file needed to start with test_ in the filename for pytest to detect it, so renaming the file was one key fix I learned.
+
+I also encountered an ImportError in my assignment_etl.py file, where Python couldn’t find or import the function get_place_reviews from apicalls.py. This made me realize that the apicalls.py file either doesn't contain the right functions or they are not named or implemented correctly. I still need to review that file and ensure it includes get_place_reviews, analyze_sentiment, and extract_entities.
+
+Another challenge was understanding the file structure....specifically where the cache CSVs should be stored and how to clear or re-run the ETL steps if something failed. I attempted to run rm cache/*.csv, but PowerShell couldn’t find the folder, which taught me to be more careful about checking paths and directory structures when writing or running scripts.
+
+I feel like I understand the purpose of each test and what it is checking for: the existence of the output CSVs, whether they have the correct number of rows, and whether the expected columns are present. But I need more practice with writing importable functions, organizing testable code, and debugging Python environment issues like missing files or modules.
 
